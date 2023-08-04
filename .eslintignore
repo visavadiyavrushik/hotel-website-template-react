@@ -1,0 +1,5 @@
+# src/example_folder/folder_tobe_removed_from_lint/*
+/node_modules
+
+src/*.test.js
+src/**/*.test.js

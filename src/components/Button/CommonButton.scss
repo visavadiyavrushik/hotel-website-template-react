@@ -1,0 +1,23 @@
+@import '../../scss/variables';
+
+.primary-btn {
+  border-radius: 0 !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 100% !important;
+  font-family: $primary-font-family !important;
+  border: none !important;
+  color: $white !important;
+  background: $primary !important;
+
+  &:hover {
+    color: $primary !important;
+    background: $ivory !important;
+  }
+}
+
+@media (max-width: 1366px) {
+  .primary-btn {
+    font-size: 14px !important;
+  }
+}

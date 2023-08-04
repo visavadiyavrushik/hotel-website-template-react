@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'Kepler Std Bold Semicondensed Display';
+  /* font-family: 'Kepler Std'; */
+  font-style: normal;
+  font-weight: normal;
+  src: local('Kepler Std Bold Semicondensed Display'), url('./assets/font/KeplerStd-BoldScnDisp.woff') format('woff');
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger :focus {
+  outline: none;
+}
+
+.hamburger div {
+  width: 2rem;
+  height: 0.18rem;
+  transition: all 0.3s linear;
+  background-color: #FFFFFF;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.hamburger div:first-child {
+  transform: rotate(0deg);
+}
+
+.hamburger div:nth-child(2) {
+  transform: translateX(0);
+
+}
+
+.hamburger div:nth-child(3) {
+  transform: rotate(0deg);
+}
+
+.hamburger div.isOpen:first-child {
+  transform: rotate(45deg);
+}
+
+.hamburger div.isOpen:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.hamburger div.isOpen:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.nav-bar {
+  display: flex;
+  padding: 0 26px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.book-btn {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #ffffff;
+  width: 173px;
+  height: 48px;
+  border: 1px solid #ffffff;
+  background: none;
+  border-radius: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+
+/* home slider */
+@keyframes zoomInimage {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+}
+
+.slick-slider {
+  min-height: 100vh;
+  /* width: 100%; */
+}
+
+.zoomInImage {
+  width: 100%;
+  height: calc(100vh - 6px);
+  object-fit: cover;
+  animation-name: zoomInimage;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  /* animation-delay: 2s; */
+}
+
+
+.slide__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+
+.slide__content.headings {
+  text-align: center;
+  color: #fff;
+}
+
+.slide__content.headings h2 {
+  font-size: 4.5rem;
+  margin: 10px 0;
+  color: #fff;
+  font-family: 'Kepler Std Bold Semicondensed Display' !important;
+}
